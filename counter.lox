@@ -1,0 +1,37 @@
+class Counter {
+  init(start) {
+    this.value = start;
+  }
+
+  increase(amount) {
+    this.value = this.value + amount;
+  }
+
+  decrease(amount) {
+    this.value = this.value - amount;
+  }
+
+  display() {
+    print this.value;
+  }
+}
+
+var first = Counter(10);
+first.display();
+
+first.increase(5);
+first.display();
+
+first.decrease(3);
+first.display();
+
+print "Testing zero:";
+var second = Counter(0);
+second.display();
+second.decrease(1);
+second.display();
+
+print "Testing negative number:";
+var third = Counter(-5);
+third.increase(2);
+third.display();
